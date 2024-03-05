@@ -7,17 +7,15 @@
             <p class="mb-8 font-medium text-base leading-relaxed">I'm a developer dedicated to building web solutions that drive results.
                 Check out my portfolio to see how I've helped businesses like yours succeed online. Let's talk about what I can achieve for you.</p>
             <div class="flex justify-center space-x-2.5">
-                 <a href="#projects" class="inline-flex text-white bg-blue-950 border-0 py-1.5 px-6 focus:outline-none hover:bg-blue-600 rounded font-medium text-base">
+                 <a href="#projects" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-full font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 outline-none focus:outline-none focus:ring-2 transition ease-in-out duration-150">
                     Portfolio
                 </a>
-                <a href="#contact" class="inline-flex text-blue-950 bg-transparent border border-blue-950 py-1.5 px-6 focus:outline-none hover:bg-blue-600 rounded font-medium text-base">
+                <a href="#contact" class="inline-flex items-center px-4 py-2 bg-transparent border border-gray-800 rounded-full font-semibold text-xs text-gray-800 hover:text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 outline-none focus:outline-none focus:ring-2 transition ease-in-out duration-150">
                     Contacts
                 </a>
             </div>
         </div>
-        <div class="hero-image lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-{{--            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/robot.jpeg') }}">--}}
-        </div>
+        <div class="hero-image lg:max-w-lg lg:w-full md:w-1/2 w-5/6"></div>
     </div>
 </section>
 {{--        Banner --}}
@@ -93,7 +91,7 @@
             <p>With my expertise in software development, I strive to deliver exceptional products that are not only user-friendly but also scalable and secure.
                 I stay up-to-date with the latest industry trends to ensure my work exceeds expectations and stands out in a competitive market.</p>
             <div class="flex justify-center mt-4">
-                <a href="#contact" class="inline-flex text-white bg-blue-950 border-0 py-1.5 px-6 focus:outline-none hover:bg-blue-600 rounded font-medium text-base">
+                <a href="#contact" class="inline-flex items-center px-4 py-2 bg-transparent border border-gray-800 rounded-full font-semibold text-xs text-gray-800 hover:text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 outline-none focus:outline-none focus:ring-2 transition ease-in-out duration-150">
                     Contact Me
                 </a>
             </div>
@@ -229,7 +227,9 @@
                 <p class="text-red-500 text-xs">{{ $message }}</p>
                 @enderror
             </div>
-            <button class="text-white bg-blue-950 border-0 py-1.5 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+            <div class="w-full mx-auto">
+                <button class="inline-flex items-center px-24 py-2 bg-gray-800 border border-transparent rounded-full font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 outline-none focus:outline-none focus:ring-2 transition ease-in-out duration-150">Send</button>
+            </div>
             <p class="text-xs text-gray-500 mt-3">We will never share you email with anyone.</p>
         </form>
     </div>

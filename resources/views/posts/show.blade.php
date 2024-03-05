@@ -6,7 +6,7 @@
             </h2>
              <div class="flex py-2 items-center justify-center">
                 <img src="{{ $post->author->profile_photo_url }}"
-                     class="h-12 w-12 rounded-full mr-2 object-cover" alt="{{ $post->author->name }}"/>
+                     class="h-12 w-12 border rounded-full mr-2 object-cover" alt="{{ $post->author->name }}"/>
                 <div>
                     <p class="font-semibold text-gray-700 text-sm"> {{ $post->author->name }} </p>
                     <p class="font-semibold text-gray-600 text-xs"> Author </p>

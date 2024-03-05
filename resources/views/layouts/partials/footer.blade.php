@@ -2,7 +2,7 @@
 <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
 <div class="flex flex-wrap items-center justify-center flex-col gap-4 lg:gap-0 lg:flex-row lg:justify-between">
 <div>
-<p class="text-custom-sm">&copy; <script>document.write(new Date().getFullYear())</script> Selvigtech. All rights reserved</p>
+<p class="text-custom-sm">&copy; {{ date("Y") }} Selvigtech. All rights reserved</p>
 </div>
 <div>
 <ul class="flex flex-wrap items-center gap-2.5">

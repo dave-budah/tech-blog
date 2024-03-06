@@ -6,19 +6,19 @@
     <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] z-10 left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
         <ul class="flex md:flex-row flex-col md:items-center md:gap-x-[2vw] gap-4 text-base font-medium w-full">
             <li>
-                <a wire:navigate class="text-gray-500 transition hover:text-blue-950" href="{{ route('home') }}">Home</a>
+                <a wire:navigate class="text-gray-800 transition hover:text-gray-500" href="{{ route('home') }}">Home</a>
             </li>
             <li>
-                <a class="text-gray-500 transition hover:text-blue-950" href="#about">About</a>
+                <a class="text-gray-800 transition hover:text-gray-500" href="#about">About</a>
             </li>
             <li>
-                <a class="text-gray-500 transition hover:text-blue-950" href="#projects">Projects</a>
+                <a class="text-gray-800 transition hover:text-gray-500" href="#projects">Projects</a>
             </li>
             <li>
-                <a class="text-gray-500 transition hover:text-blue-950" href="#contact">Contact</a>
+                <a class="text-gray-800 transition hover:text-gray-500" href="#contact">Contact</a>
             </li>
             <li>
-                <a wire:navigate class="text-gray-500 transition hover:text-blue-950" href="{{ route('posts.index') }}">Blog</a>
+                <a wire:navigate class="text-gray-800 transition hover:text-gray-500" href="{{ route('posts.index') }}">Blog</a>
             </li>
         </ul>
     </div>

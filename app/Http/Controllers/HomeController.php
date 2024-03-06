@@ -40,7 +40,7 @@ class HomeController extends Controller
             'email' =>'required|email',
             'message' =>'required|min:10',
         ]);
-        // Mail::to('davebudah@gmail.com')->send(new ContactUs($data));
+
         Message::create($data);
         $job = (new ContactUsJob($data));
         dispatch($job);

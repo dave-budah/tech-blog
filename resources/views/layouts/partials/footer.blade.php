@@ -23,7 +23,7 @@
 <span class="flex w-[3px] h-[3px] rounded-full bg-dark-2"></span>
 </li>
 <li>
-<a href="signup.html" class="group leading-none flex text-custom-sm ease-in duration-200 hover:text-dark">
+<a href="{{ route('home') }}" class="group leading-none flex text-custom-sm ease-in duration-200 hover:text-dark">
 <span class="bg-gradient-to-r from-dark to-dark bg-[length:0px_1px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_1px]">Contact</span>
 </a>
 </li>
@@ -31,7 +31,7 @@
 <span class="flex w-[3px] h-[3px] rounded-full bg-dark-2"></span>
 </li>
 <li>
-<a href="signup.html" class="group leading-none flex text-custom-sm ease-in duration-200 hover:text-dark">
+<a href="{{ route('register') }}" class="group leading-none flex text-custom-sm ease-in duration-200 hover:text-dark">
 <span class="bg-gradient-to-r from-dark to-dark bg-[length:0px_1px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_1px]">Contribute</span>
 </a>
 </li>

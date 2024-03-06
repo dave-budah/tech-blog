@@ -1,21 +1,28 @@
 <x-app-layout :title="$post->title">
+    @section('title') {{ $post->title  }} @endsection
+    @section('description') {{ $post->excerpt()  }} @endsection
+    @section('image') {{ $post->getThumbnailUrl()  }}@endsection
+    @section('url'){{ route('posts.show', $post->slug) }}@endsection
+
     <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
         <div class="show-title-block px-4 lg:px-0 pt-20">
             <h2 class="text-2xl font-semibold text-blue-950 leading-tight text-center">
                 {{ $post->title }}
             </h2>
-             <div class="flex py-2 items-center justify-center">
+            <div class="flex py-2 items-center justify-center">
                 <img src="{{ $post->author->profile_photo_url }}"
                      class="h-12 w-12 border rounded-full mr-2 object-cover" alt="{{ $post->author->name }}"/>
                 <div>
                     <p class="font-semibold text-gray-700 text-sm"> {{ $post->author->name }} </p>
                     <p class="font-semibold text-gray-600 text-xs"> Author </p>
                 </div>
-             </div>
+            </div>
             <div class="mt-1 mb-3 flex items-center justify-center gap-1.5 text-xs">
-                <h5 class="py-0 text-gray-700 inline-flex items-center justify-center border-e-gray-700">{{ $post->readTime() }} min read</h5>
+                <h5 class="py-0 text-gray-700 inline-flex items-center justify-center border-e-gray-700">{{ $post->readTime() }}
+                    min read</h5>
                 <span class="flex w-[3px] h-[3px] rounded-full bg-gray-700"></span>
-                <p class="text-gray-700 inline-flex items-center justify-center">Published: {{ $post->published_at->diffForHumans() }}</p>
+                <p class="text-gray-700 inline-flex items-center justify-center">
+                    Published: {{ $post->published_at->diffForHumans() }}</p>
             </div>
         </div>
 
@@ -36,11 +43,15 @@
                     @endforeach
                 </div>
 
-            <!-- Comments  -->
+                <div class="my-5 mx-auto">
+                    <h3 class="text-2xl my-6 text-center font-semibold text-blue-950 leading-tight">Share to social media</h3>
+
+                    <x-social.links :post="$post" url="{{ Request::url() }}"/>
+                </div>
+
+                <!-- Comments  -->
                 <livewire:post-comments :key="'comments' . $post->id.now()" :$post/>
             </div>
-              <!-- Sidebar start here  -->
-
         </div>
     </div>
 </x-app-layout>

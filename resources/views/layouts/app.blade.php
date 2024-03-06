@@ -1,10 +1,23 @@
 @props(['title'])
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="!scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+<!-- Facebook Meta  -->
+    <meta property="og:description" content="@yield('description')">
+    <meta property="og:image" content="@yield('image')">
+    <meta property="og:image" content="image/jpeg">
+    <meta property='og:url' content="@yield('url')">
+
+<!-- Twitter Meta  -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@blog">
+    <meta name="twitter:image" content="@yield('image')">
+    <meta name="twitter:description" content="@yield('description')">
+    <meta name="twitter:title" content="@yield('title')">
 
     <title>{{ config('app.name', '') }} {{ $title ?? '' }}</title>
 

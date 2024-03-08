@@ -1,7 +1,7 @@
- <div id="search-box">
+ <div id="search-box bg-red-600">
      <div>
          <h3 class="text-lg font-semibold text-gray-900 mb-3">Search</h3>
-         <div class="w-52 flex rounded-2xl bg-gray-200 py-2 px-3 mb-3 items-center">
+         <div class="flex rounded-lg bg-gray-200 py-2 px-3 mb-3 items-center w-full">
             <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -9,7 +9,7 @@
                 </svg>
             </span>
          <input wire:model.live.debounce.300ms="search"
-             class="w-40 ml-1 bg-transparent focus:outline-none focus:border-none focus:ring-0 outline-none border-none text-xs text-gray-800 placeholder:text-gray-500"
+             class="w-full ml-1 bg-transparent focus:outline-none focus:border-none focus:ring-0 outline-none border-none text-xs text-gray-800 placeholder:text-gray-500"
              type="text" placeholder="Search articles">
          </div>
      </div>

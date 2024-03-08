@@ -20,6 +20,7 @@
     <meta name="twitter:title" content="@yield('title')">
 
     <title>{{ config('app.name', '') }} {{ $title ?? '' }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
     <!-- Fonts -->
@@ -38,7 +39,7 @@
 @include('layouts.partials.header')
 
 
-<main class="main">
+<main class="main px-2">
 {{ $slot }}
 </main>
 

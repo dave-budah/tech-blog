@@ -80,10 +80,10 @@
 <!-- Services End  -->
 
 <!-- About Start  -->
-<section id="about" class="text-gray-600 body-font" style="background-color:#eef5fc;">
+<section id="about" class="text-gray-600 body-font bg-[#eef5fc]">
  <div class="container flex py-24 md:flex-row flex-col items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="hero-image lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/robot.jpeg') }}">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/dave.png') }}">
         </div>
 
         <div class="hero-text lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">

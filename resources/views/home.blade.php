@@ -1,6 +1,6 @@
 <x-app-layout title="Home">
 <!-- Hero Start  -->
-<section class="text-gray-600 body-font bg-[#eef5fc] bg-no-repeat" style="background-image: url({{ asset('images/background.jpg') }}); background-size: cover; background-position:center center; min-height: 60vh;">
+<section class="text-gray-600 body-font bg-[#eef5fc] bg-no-repeat" style="background-image: url({{ asset('images/background.jpg') }}); background-size: cover; background-position:center center; min-height: 50svh;">
  <div class="container flex py-24 md:flex-row flex-col items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="hero-text lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-blue-950">Welcome!</h1>

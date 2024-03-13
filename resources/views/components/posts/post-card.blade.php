@@ -1,6 +1,6 @@
 @props(['post'])
 <div class="p-4 md:w-1/3" {{ $attributes }}>
-   <div class="rounded overflow-hidden shadow-lg">
+   <div class="rounded-lg overflow-hidden shadow-lg">
 
     <a href="{{ route('posts.show', $post->slug) }}"></a>
     <div class="relative">

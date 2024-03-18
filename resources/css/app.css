@@ -5,3 +5,6 @@
 [x-cloak] {
     display: none;
 }
+*{
+    font-family: "Lato", sans-serif;
+}

@@ -23,7 +23,7 @@
     </div>
     <div class="px-6 py-4">
         <a href="{{ route('posts.show', $post->slug) }}" class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">
-            {{ $post->title }}
+            {{ Str::limit($post->title, 30) }}
         </a>
         <p class="text-gray-500 text-base">
             {{ $post->excerpt() }}

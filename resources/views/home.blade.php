@@ -3,7 +3,7 @@
 <section class="text-gray-600 body-font bg-[#eef5fc] bg-no-repeat" style="background-image: url({{ asset('images/background.jpg') }}); background-size: cover; background-position:center center; min-height: 50svh;">
  <div class="container flex py-24 md:flex-row flex-col items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="hero-text lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-blue-950">Welcome!</h1>
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-blue-950">Welcome!</h1>
             <p class="mb-8 font-medium text-base leading-relaxed">I'm a developer dedicated to building web solutions that drive results.
                 Check out my portfolio to see how I've helped businesses like yours succeed online. Let's talk about what I can achieve for you.</p>
             <div class="flex justify-center space-x-2.5">
@@ -24,7 +24,7 @@
 <section id="services" class="text-gray-600 body-font">
     <div class="container py-24 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20 services-title">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-blue-950 mb-4">What I offer</h1>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font text-blue-950 mb-4">What I offer</h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Here are my top services</p>
             <div class="flex mt-6 justify-center">
                 <div class="w-16 h-1 rounded-full bg-blue-950 inline-flex"></div>
@@ -87,7 +87,7 @@
         </div>
 
         <div class="hero-text lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-blue-950">Who am I?</h1>
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-blue-950">Who am I?</h1>
             <p class="mb-8 font-medium text-base leading-relaxed">A versatile developer with 5+ years of expertise in both frontend and backend technologies.
                 Proficient in Java, JavaScript, PHP, Angular, Laravel, Rust, and Node.js. Successfully delivered projects for
                 <a href="https://absp.online/about" target="_blank" class="decoration-0 text-blue-600">ABSP</a> over a 4-year period.</p>
@@ -108,7 +108,7 @@
 <section id="projects" class="text-gray-600 body-font">
     <div class="container py-24 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
          <div class="projects-title text-center mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-blue-950 mb-4">My Portfolio</h1>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font text-blue-950 mb-4">My Portfolio</h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Some of my recent work</p>
             <div class="flex mt-6 justify-center">
                 <div class="w-16 h-1 rounded-full bg-blue-950 inline-flex"></div>
@@ -128,16 +128,19 @@
 <section id="blog" class="text-gray-600 body-font bg-[#eef5fc]">
     <div class="container py-24 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
          <div class="text-center mb-20 articles-title">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-blue-950 mb-4">Featured Articles</h1>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font text-blue-950 mb-4">Featured Articles</h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">I also write articles here and there.</p>
             <div class="flex mt-6 justify-center">
                 <div class="w-16 h-1 rounded-full bg-blue-950 inline-flex"></div>
             </div>
         </div>
         <div class="articles-block flex flex-wrap -m-4">
-            @foreach($featured as $post)
-                <x-posts.post-card :post="$post"/>
-            @endforeach
+            @if($featured)
+                 @foreach($featured as $post)
+                    <x-posts.post-card :post="$post"/>
+                @endforeach
+            @endif
+
         </div>
     </div>
 </section>
@@ -201,7 +204,7 @@
             @if (session()->has('success'))
                 <div class="relative flex flex-col sm:flex-row sm:items-center bg-gray-200 dark:bg-green-700 shadow rounded-md py-3 pl-6 pr-8 sm:pr-6 mb-3 mt-3">
                     <div class="flex flex-row items-center border-b sm:border-b-0 w-full sm:w-auto pb-4 sm:pb-0">
-                        <div class="text-green-500" dark:text-gray-500>
+                        <div class="text-green-500">
                             <svg class="w-6 sm:w-5 h-6 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <div class="text-base text-gray-500 font-medium ml-3">Success!.</div>

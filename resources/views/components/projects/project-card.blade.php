@@ -1,7 +1,7 @@
 @props(['project'])
 <div class="p-4 lg:w-1/2">
 <div class="rounded-lg overflow-hidden flex flex-col max-w-xl mx-auto">
-    <a href="#">
+    <a href="#" class="shadow-md">
         <img class="w-full h-80" src="{{ $project->getThumbnailUrl() }}" alt="Sunset in the mountains">
     </a>
     <div class="relative -mt-16 px-5 pt-5 pb-16 m-10 bg-[#eef5fc] shadow-lg">

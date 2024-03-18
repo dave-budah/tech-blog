@@ -45,6 +45,6 @@ class HomeController extends Controller
         $job = (new ContactUsJob($data));
         dispatch($job);
 
-        return redirect()->back()->with('success', 'Your message has been sent!');
+        return to_route('home')->with('success', 'Your message has been sent!');
     }
 }

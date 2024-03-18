@@ -15,11 +15,12 @@
                 <a class="text-gray-800 transition hover:text-gray-500" href="#projects">Projects</a>
             </li>
             <li>
-                <a class="text-gray-800 transition hover:text-gray-500" href="#contact">Contact</a>
-            </li>
-            <li>
                 <a wire:navigate class="text-gray-800 transition hover:text-gray-500" href="{{ route('posts.index') }}">Blog</a>
             </li>
+            <li>
+                <a class="text-gray-800 transition hover:text-gray-500" href="#contact">Contact</a>
+            </li>
+
         </ul>
     </div>
     <div class="flex items-center gap-6">

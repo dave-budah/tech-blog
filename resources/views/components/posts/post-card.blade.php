@@ -8,12 +8,13 @@
             <img class="w-full h-60" src="{{ $post->getThumbnailUrl() }}" alt="Sunset in the mountains">
             <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
         </a>
-        <a href="{{ route('posts.show', $post->slug) }}">
-            <div class="absolute bottom-0 left-0 bg-blue-950 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                {{ $post->readTime() }} mins read time
+        @if($category = $post->categories()->first())
+        <a href="{{ route('posts.index', ['category' => $category->title]) }}">
+            <div class="absolute bottom-0 left-0 bg-blue-950 rounded-tr-md px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                {{ $category->title }}
             </div>
         </a>
-
+       @endif
         <a href="{{ route('posts.show', $post->slug) }}">
             <div class="text-sm absolute top-0 right-0 bg-blue-950 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
                 <span class="font-bold">{{ $post->published_at->format('d') }}</span>
@@ -23,7 +24,7 @@
     </div>
     <div class="px-6 py-4">
         <a href="{{ route('posts.show', $post->slug) }}" class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">
-            {{ Str::limit($post->title, 30) }}
+            {{ Str::limit($post->title, 35) }}
         </a>
         <p class="text-gray-500 text-base">
             {{ $post->excerpt() }}

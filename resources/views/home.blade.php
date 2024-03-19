@@ -39,7 +39,7 @@
                     </svg>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-blue-950 text-lg title-font font-medium mb-3">Web Development</h2>
+                    <h2 class="text-blue-950 text-lg title-font font-bold mb-3">Web Development</h2>
                     <h4 class="text-blue-70 text-base title-font font-medium mb-3">Custom Web Solutions That Work for You</h4>
                     <p class="leading-relaxed font-medium text-base"> From sleek websites to complex web applications,
                         I build tailored solutions that match your unique needs.
@@ -54,7 +54,7 @@
                     </svg>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-blue-950 text-lg title-font font-medium mb-3">Maintenance</h2>
+                    <h2 class="text-blue-950 text-lg title-font font-bold mb-3">Maintenance</h2>
                     <h4 class="text-blue-70 text-base title-font font-medium mb-3">Keep Your Website Running Smoothly</h4>
                     <p class="leading-relaxed font-medium text-base">Don't let technical issues or outdated content slow you down.
                         I provide ongoing maintenance services to ensure your website is secure, up-to-date, and performing at its best.</p>
@@ -68,7 +68,7 @@
                     </svg>
                 </div>
                 <div class="flex-grow">
-                    <h2 class="text-blue-950 text-lg title-font font-medium mb-3">SEO</h2>
+                    <h2 class="text-blue-950 text-lg title-font font-bold mb-3">SEO</h2>
                     <h4 class="text-blue-70 text-base title-font font-medium mb-3">Get Found Online with Strategic SEO</h4>
                     <p class="leading-relaxed font-medium text-base">I'll optimize your website to rank higher on search engines like Google.
                         This means more visibility, targeted traffic, and increased leads for your business.</p>
@@ -83,7 +83,7 @@
 <section id="about" class="text-gray-600 body-font bg-[#eef5fc]">
  <div class="container flex py-24 md:flex-row flex-col items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="hero-image lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/dave.png') }}">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ asset('images/about.jpg') }}">
         </div>
 
         <div class="hero-text lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">

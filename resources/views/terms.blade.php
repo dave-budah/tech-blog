@@ -12,7 +12,7 @@
                 <h3>Intellectual Property</h3>
                 <p>All content on the Website, including text, graphics, logos, images, software, and code, is the property of Selvigtech or its licensors and is protected by copyright, trademark, and other intellectual property laws.  You may not use any content without the express written permission of Selvigtech.</p>
                 <h3>User Content</h3>
-                <p>You may be able to submit content to the Website, such as comments, reviews, or other contributions ("User Content"). You are solely responsible for your User Content. By submitting User Content, you grant Selvigtech a non-exclusive, royalty-free, worldwide, perpetual, irrevocable license to use, reproduce, modify, adapt, publish, translate, and distribute your User Content in any media.</p>
+                <p>You may be able to submit content to the Website, such as comments, reviews, or other contributions. You are solely responsible for your User Content. By submitting User Content, you grant Selvigtech a non-exclusive, royalty-free, worldwide, perpetual, irrevocable license to use, reproduce, modify, adapt, publish, translate, and distribute your User Content in any media.</p>
                 <h5>You represent and warrant that your User Content:</h5>
                 <ul class="list-disc">
                     <li>Is original to you and you have the right to grant the license above</li>

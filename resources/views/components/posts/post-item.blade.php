@@ -7,24 +7,24 @@
             </a>
         </div>
         <div class="col-span-12 lg:col-span-8">
-            <div class="article-meta flex py-1 text-sm items-center">
+            <div class="article-meta flex items-center gap-2.5 py-1 text-sm">
                 <x-posts.author :author="$post->author"/>
-                <span class="text-gray-500 text-xs">. {{ $post->published_at->diffForHumans() }}</span>
+                <span class="flex w-[3px] h-[3px] rounded-full bg-gray-600"></span>
+                <span class="text-gray-500 text-xs"> {{ $post->publishedDate() }}</span>
             </div>
-            <h2 class="text-xl font-bold text-blue-950">
+            <h2 class="md:text-xl sm:text-base font-bold text-[#4A5C6A]">
                 <a wire:navigate href="{{ route('posts.show', $post->slug) }}">{{ $post->title }}</a>
             </h2>
 
-            <p class="mt-2 font-medium text-base text-gray-700">{{ $post->excerpt() }}</p>
+            <p class="mt-2 leading-relaxed font-medium text-base text-[#728495]">{{ $post->excerpt() }}</p>
 
             <div class="article-actions-bar mt-6 flex items-center justify-between">
-                <div class="flex gap-x-2">
+                <div class="flex items-center gap-2.5 text-sm">
                     @foreach ($post->categories as $category)
                        <x-posts.category-badge :category="$category"/>
                      @endforeach
-                    <div class="flex items-center space-x-4">
-                        <span class="text-gray-500 text-sm">{{ $post->readTime() }} mins read time</span>
-                    </div>
+                    <span class="flex w-[3px] h-[3px] rounded-full bg-gray-600"></span>
+                    <span class="text-gray-500 text-sm">{{ $post->human_read_time }}</span>
                 </div>
                 <div>
                     <livewire:like-button :key="'like-' . $post->id.now()" :$post/>

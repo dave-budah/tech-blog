@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -38,6 +39,20 @@ class Post extends Model
     public function categories() {
         return $this->belongsToMany(Category::class);
     }
+
+    public function publishedDate()
+{
+    $publishedAt = $this->published_at;
+    $sevenDaysAgo = \Carbon\Carbon::now()->subDays(7);
+
+    if ($publishedAt->greaterThan($sevenDaysAgo)) {
+        return $publishedAt->diffForHumans();
+    } else {
+        return $publishedAt->format('F jS Y');
+    }
+}
+
+
     public function scopeFeatured($query)
     {
         $query->where('featured', true);
@@ -62,10 +77,13 @@ class Post extends Model
     public function excerpt() {
         return Str::limit(strip_tags($this->body), 100);
     }
-    public function readTime()
+    public function humanReadTime(): Attribute
     {
-        $mins = round(str_word_count($this->body) / 250);
-        return ($mins < 1) ? 1 : $mins;
+        return new Attribute( get: function ($value, $attributes) {
+            $words = Str::wordCount(strip_tags($attributes['body']));
+            $minutes = ceil($words / 200);
+            return $minutes. ' '.str('min')->plural($minutes);
+        });
     }
     public function comments()
     {

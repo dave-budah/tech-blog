@@ -1,5 +1,5 @@
 <x-app-layout title="Blog">
-    <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8" style="margin-top: 8rem;">
         <div class="w-full grid grid-cols-4 gap-10">
             <div class="md:col-span-3 col-span-4">
                 <livewire:post-list/>

@@ -14,8 +14,8 @@
         <div class="flex items-center space-x-4 font-light">
             <x-label>Trending</x-label>
             <x-checkbox wire:model.live="popular"/>
-            <button class="{{ $sort === 'desc' ? 'text-gray-900 font-medium text-sm border-b border-gray-700' : 'text-gray-500'}} py-4" wire:click="setSort('desc')">Latest</button>
-            <button class="{{ $sort === 'asc' ? 'text-gray-900 font-medium text-sm border-b border-gray-700' : 'text-gray-500'}} text-gray-900 py-4 border-gray-700" wire:click="setSort('asc')">Oldest</button>
+            <button class="{{ $sort === 'desc' ? 'text-[#4A5C6A] font-medium text-sm border-b border-gray-700' : 'text-[#253745]'}} py-4" wire:click="setSort('desc')">Latest</button>
+            <button class="{{ $sort === 'asc' ? 'text-[#4A5C6A] font-medium text-sm border-b border-gray-700' : 'text-[#253745]'}} py-4 border-gray-700" wire:click="setSort('asc')">Oldest</button>
         </div>
     </div>
     <div class="py-4">
@@ -23,7 +23,7 @@
             <x-posts.post-item wire:key="{{$post->id}}" :post="$post"/>
         @endforeach
     </div>
-    <div class="my-3">
-        {{ $this->posts->onEachSide(1)->links() }}
+    <div class="my-3 pagination-block">
+        {{ $this->posts->links() }}
     </div>
 </div>

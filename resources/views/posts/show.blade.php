@@ -6,12 +6,11 @@
 
     <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8" style="margin-top: 8rem;">
         <div class="show-title-block px-4 lg:px-0 pt-10 mt-15">
-            <h2 class="text-2xl sm:text-md font-semibold leading-tight text-center text-[#4A5C6A]">
+            <h2 class="md:text-2xl sm:text-xl font-semibold leading-tight text-center text-[#4A5C6A]">
                 {{ $post->title }}
             </h2>
             <div class="flex py-2 items-center justify-center">
-                <img src="{{ $post->author->profile_photo_url }}"
-                     class="h-12 w-12 border rounded-full mr-2 object-cover" alt="{{ $post->author->name }}"/>
+                <img src="{{ $post->author->profile_photo_url }}" class="h-10 w-10 border rounded-full mr-2 object-cover" alt="{{ $post->author->name }}"/>
                 <div>
                     <p class="font-semibold text-gray-700 text-sm"> {{ $post->author->name }} </p>
                     <p class="font-semibold text-gray-600 text-xs"> Author </p>
@@ -25,8 +24,10 @@
             </div>
         </div>
 
-        <img src="{{ $post->getThumbnailUrl() }}" class="w-full object-cover rounded-lg" style="height: 28em;"
-             alt="{{ $post->title }}"/>
+        <div class="md:h-[28em] sm:h-[20em] rounded-lg overflow-hidden">
+            <img src="{{ $post->getThumbnailUrl() }}" class="w-full h-full object-cover" alt="{{ $post->title }}"/>
+        </div>
+
 
         <div class="flex flex-col lg:flex-row lg:space-x-8 mb-8 mx-auto max-w-screen-md">
 
@@ -45,7 +46,7 @@
                 </div>
 
                 <div class="my-5 mx-auto">
-                    <h3 class="text-2xl my-6 text-center font-semibold text-[#4A5C6A] leading-tight">Share to social media</h3>
+                    <h3 class="md:text-2xl sm:text-xl my-6 text-center font-semibold text-[#4A5C6A] leading-tight">Share to social media</h3>
 
                     <x-social.links :post="$post" url="{{ Request::url() }}"/>
                 </div>

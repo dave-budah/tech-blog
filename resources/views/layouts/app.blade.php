@@ -13,14 +13,20 @@
     <meta property='og:url' content="@yield('url')">
 
     <!-- Twitter Meta  -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@blog">
+    <meta name="twitter:card" content="@yield('image')">
+    <meta name="twitter:site" content="@yield('url')">
     <meta name="twitter:image" content="@yield('image')">
     <meta name="twitter:description" content="@yield('description')">
     <meta name="twitter:title" content="@yield('title')">
 
-    <title>{{ config('app.name', '') }} {{ $title ?? '' }}</title>
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+
+    <title>{{ config('app.name', '') }}{{ $title ? ' - ' . $title : '' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

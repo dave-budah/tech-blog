@@ -21,7 +21,7 @@
     @endauth
 
     <div class="user-comments">
-        <h4 class="text-2xl my-6 font-semibold text-[#4A5C6A] leading-tight">Comments</h4>
+        <h4 class="md:text-2xl sm:text-xl my-6 font-semibold text-[#4A5C6A] leading-tight">Comments</h4>
         @forelse($this->comments as $comment)
             @if($editingCommentId === $comment->id)
             <textarea wire:model="comment" @click="focused = true" id="message" :rows="focused ? '4' : '1'" class="block p-2.5 w-full text-sm text-gray-900 bg-none rounded-lg border border-gray-300 focus:ring-blue-500 resize-none focus:border-blue-500 transition ease-in-out duration-150" placeholder="Edit your comment"></textarea>

@@ -47,7 +47,7 @@ A passionate software developer committed to delivering innovative and elegant d
 </div>
 
 </div>
-<div class="max-w-[277px] w-full h-[277px] rounded-full flex items-center justify-center border border-gray-3">
+<div class="max-w-[277px] w-full h-[277px] rounded-full flex items-center justify-center border border-gray-3 outer-circle">
 <div class="max-w-[165px] w-full h-[165px] shadow-img rounded-full overflow-hidden">
 <img src="{{ asset('images/dave.png') }}" alt="user" />
 </div>

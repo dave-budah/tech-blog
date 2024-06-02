@@ -238,7 +238,7 @@ A passionate software developer committed to delivering innovative and elegant d
           </div>
         </div>
 
-        <form action="{{ route('home.send') }}" method="POST" class="message-box lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <form id="messageForm" action="{{ route('home.send') }}" method="POST" class="message-box lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
             @csrf
             @if (session()->has('success'))
                 <div class="relative flex flex-col sm:flex-row sm:items-center bg-gray-200 dark:bg-green-700 shadow rounded-md py-3 pl-6 pr-8 sm:pr-6 mb-3 mt-3">
@@ -284,3 +284,4 @@ A passionate software developer committed to delivering innovative and elegant d
 </section>
 <!-- End Contact  -->
 </x-app-layout>
+
